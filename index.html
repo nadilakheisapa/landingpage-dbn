@@ -33,47 +33,60 @@
   <!-- Template Stylesheet -->
   <link href="css/style.css" rel="stylesheet" />
   <link rel="stylesheet" href="path/to/your/styles.css">
+  
 
   <style>
     .bg-brown {
-      background-color: #ab7442;
+      background-color: #AB7442;
+      background: linear-gradient(45deg, #AB7442 50%, #2C2C2C 50%);
+      color: #fff;
+      padding: 20px;
+      border-radius: 5px;
     }
+
     .navbar-toggler {
-  border: none;
-}
+      border: none;
+    }
 
-.navbar-toggler-icon {
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  position: relative;
-}
+    .navbar-toggler-icon {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      position: relative;
+    }
 
-.navbar-toggler-icon::before,
-.navbar-toggler-icon::after,
-.navbar-toggler-icon div {
-  content: '';
-  display: block;
-  width: 24px;
-  height: 2px;
-  background-color: white;
-  position: absolute;
-  left: 0;
-  transition: all 0.3s;
-}
+    .navbar-toggler-icon::before,
+    .navbar-toggler-icon::after,
+    .navbar-toggler-icon div {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 2px;
+      background-color: white;
+      position: absolute;
+      left: 0;
+      transition: all 0.3s;
+    }
 
-.navbar-toggler-icon::before {
-  top: 6px;
-}
+    .navbar-toggler-icon::before {
+      top: 6px;
+    }
 
-.navbar-toggler-icon div {
-  top: 12px;
-}
+    .navbar-toggler-icon div {
+      top: 12px;
+    }
 
-.navbar-toggler-icon::after {
-  top: 18px;
-}
+    .navbar-toggler-icon::after {
+      top: 18px;
+    }
+     /* .nav-link.active {
+    background-color: #AB7442 !important; 
+    color: #fff !important; 
+  }
 
+  .nav-link.active h5, .nav-link.active i {
+    color: #fff !important; 
+  } */
   </style>
 </head>
 
@@ -87,6 +100,40 @@
   </div>
   <!-- Spinner End -->
 
+  <!-- Topbar Start -->
+  <div class="container-fluid bg-light p-0">
+    <div class="row gx-0 d-none d-lg-flex">
+      <div class="col-lg-7 px-5 text-start">
+        <div class="h-100 d-inline-flex align-items-center py-2 me-4">
+          <small class="fa fa-map-marker-alt text-primary me-2"></small>
+          <small>Jl. Suryat</small>
+        </div>
+        <div class="h-100 d-inline-flex align-items-center py-2">
+          <small class="far fa-clock text-primary me-2"></small>
+          <small>Senin - Sabtu : 08.00 - 17.00</small>
+        </div>
+      </div>
+      <div class="col-lg-5 px-5 text-end">
+          <!-- <div class="h-100 d-inline-flex align-items-center py-2 me-4">
+            <small class="fa fa-phone-alt text-primary me-2"></small>
+            <small>+62 821 4242 2727</small>
+          </div> -->
+        <div class="h-100 d-inline-flex align-items-center">
+          <a class="btn btn-sm-square bg-white rounded-pill text-primary me-1" href=""><i
+              class="fab fa-facebook-f"></i></a>
+          <a class="btn btn-sm-square bg-white rounded-pill text-primary me-1" href=""><i
+              class="fab fa-twitter"></i></a>
+          <a class="btn btn-sm-square bg-white rounded-pill text-primary me-1" href=""><i
+              class="fab fa-linkedin-in"></i></a>
+          <a class="btn btn-sm-square bg-white rounded-pill text-primary me-0" href=""><i
+              class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Topbar End -->
+
+
   <!-- Navbar Start -->
   <nav class="navbar navbar-expand-lg bg-dark navbar-light sticky-top p-0">
     <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
@@ -98,7 +145,7 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <div class="navbar-nav ms-auto p-4 p-lg-0">
         <a href="index.html" class="nav-item nav-link active">Beranda</a>
-        <a href="404.html" class="nav-item nav-link">Mengapa Kami</a>
+        <a href="whyus.html" class="nav-item nav-link">Mengapa Kami</a>
         <a href="about.html" class="nav-item nav-link">Tentang Kami</a>
         <a href="service.html" class="nav-item nav-link">Layanan</a>
         <!-- <a href="project.html" class="nav-item nav-link">Project</a>
@@ -114,8 +161,8 @@
           </div> -->
         <a href="contact.html" class="nav-item nav-link">Kontak Kami</a>
       </div>
-      <a href="https://api.whatsapp.com/send?phone=6282142422727"
-        class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Hubungi Kami<i class="fa fa-arrow-right ms-3"></i></a>
+      <a href="https://api.whatsapp.com/send?phone=6282142422727" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block"><i class="fas fa-phone-alt fa-1x text-white"></i> Hubungi Kami</a>
+      <!-- <i class="fa fa-arrow-right ms-3"></i> -->
     </div>
   </nav>
   <!-- Navbar End -->
@@ -130,9 +177,11 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-12 col-lg-8 text-center">
-                <h1 class="display-3 text-white animated slideInDown mb-4">PT. Data Buana Nusantara</h1>
-                <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Selengkapnya</a>
-                <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Hubungi Kami</a>
+                <p class="text-primary mb-1 display-6"><strong>PT. Data Buana Nusantara</strong></p>
+                <h1 class="display-3 text-white animated slideInDown mb-4">Solusi Layanan Jaringan Internet Anda</h1>
+                <p class="text-white" style="font-size: 20px;">Mendukung setiap langkah Anda dengan koneksi yang handal dan berkualitas. </p>
+                <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 rounded-pill animated slideInLeft">Selengkapnya</a>
+                <a href="" class="btn btn-light py-md-3 px-md-5 rounded-pill animated slideInRight">Hubungi Kami </a>
               </div>
             </div>
           </div>
@@ -145,10 +194,11 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-12 col-lg-8 text-center">
-                <p class="text-primary mb-1 display-6"><strong>PT. Data Buana Nusantara</strong></p>
+                <p class="text-primary mb-1 display-6"><strong>Lancarkan Internetanmu</strong></p>
                 <h1 class="display-3 text-white animated slideInDown mb-4">Solusi Layanan Jaringan Internet Anda</h1>
-                <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Selengkapnya</a>
-                <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Hubungi Kami </a>
+                <p class="text-white" style="font-size: 20px;">Mendukung setiap langkah Anda dengan koneksi yang handal dan berkualitas. Dengan internet yang cepat.</p>
+                <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 rounded-pill animated slideInLeft">Selengkapnya</a>
+                <a href="" class="btn btn-light py-md-3 px-md-5 rounded-pill animated slideInRight">Hubungi Kami </a>
               </div>
             </div>
           </div>
@@ -159,7 +209,7 @@
   <!-- Carousel End -->
 
   <!-- Feature Start -->
-  <div class="container-xxl py-5">
+  <!-- <div class="container-xxl py-5">
     <div class="container">
       <div class="row g-5">
         <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
@@ -200,15 +250,137 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
   <!-- Feature Start -->
 
-  <!-- Service Start -->
-  <div class="container-xxl service py-5">
+  <!-- Facts Start -->
+  <div class="container-fluid facts my-1 py-1 pt-5">
+    <div class="container py-1">
+      <div class="row g-5">
+        <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.1s">
+          <i class="fa fa-users fa-3x text-dark mb-3"></i>
+          <h1 class="display-4 text-custom" data-toggle="counter-up">124</h1>
+          <span class="fs-5 text-dark">Pengguna Puas</span>
+          <hr class="bg-white w-25 mx-auto mb-0" />
+        </div>
+        <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.3s">
+          <i class="fa fa-network-wired fa-3x text-dark mb-3"></i>
+          <h1 class="display-4 text-custom" data-toggle="counter-up">200</h1>
+          <span class="fs-5 text-dark">Koneksi Terhubung</span>
+          <hr class="bg-white w-25 mx-auto mb-0" />
+        </div>
+        <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.5s">
+          <i class="fa fa-clock fa-3x text-dark mb-3"></i>
+          <h1 class="display-4 text-custom" data-toggle="counter-up">999</h1>
+          <span class="fs-5 text-dark">Waktu Aktif Layanan</span>
+          <hr class="bg-white w-25 mx-auto mb-0" />
+        </div>
+        <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.7s">
+          <i class="fa fa-tachometer-alt fa-3x text-dark mb-3"></i>
+          <h1 class="display-4 text-custom" data-toggle="counter-up">100</h1>
+          <span class="fs-5 text-dark">Kecepatan Tertinggi</span>
+          <hr class="bg-white w-25 mx-auto mb-0" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Facts End -->
+   
+  <section id="about" class="wow fadeInUp">
     <div class="container">
-      <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-        <!-- <p class="d-inline-block border rounded text-primary fw-semi-bold py-1 px-3">Our Services</p> -->
-        <h1 class="display-5 mb-5">Colocation Server</h1>
+      <div class="row">
+        <div class="col-lg-6 content">
+          <h1 class="animated slideInDown mb-4">PT. Data Buana Nusantara</h1>
+          <p class="fs-6 fw-medium mb-4 pb-2">
+            Memberikan layanan internet connection dengan berbagai media wireless dan fiber optic. solusi yang kreatif
+            serta komitmen atas layanannya, kami percaya mampu memberikan jasa yang berkualitas, konsisten dan memiliki
+            nilai tambah demi tercapainya tujuan bersama. ditunjang dengan server berteknologi tinggi akan menghasilkan
+            layanan yang supercepat dengan suport team 24 Jam.
+          </p>
+          <p class="fs-6 fw-medium mb-4 pb-2 mt-0">
+            Perusahaan teknologi dengan komitmen untuk terus berinovasi dan
+            berinvestasi dalam menghadirkan layanan terbaik dan jaringan yang lebih luas bagi pelanggan kami. Komitmen ini
+            didukung oleh Tim Engineering terbaik.
+          </p>
+          <!-- <a href="" class="mb-4 btn btn-primary py-md-3 px-md-5 me-3 rounded-pill animated slideInLeft">Lihat AreaCoverage</a> -->
+        </div>
+        <div class="col-lg-6 about-img">
+          <img src="img/foto.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- #about -->
+
+   <!-- Services Start -->
+   <section id="services">
+    <div class="container">
+      <div class="text-center mx-auto pb-5 pt-4 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+        <h4 class="text-primary">Jelajahi Layanan Kami</h4>
+        <h1 class="display-6 mb-3">- Jelajahi Layanan Kami -</h1>
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="box wow fadeInUp">
+            <div class="icon"><i class="fas fa-wifi"></i></div>
+            <h4 class="title"><a href="">Fiber To The Home</a></h4>
+            <p class="description">Layanan internet dengan system share tanpa batasan kouta (FUP) memberikan dukungan
+              kepada pelanggan untuk kebutuhan kerja dan sekolah dari rumah.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="box wow fadeInUp">
+            <div class="icon"><i class="fas fa-globe"></i></div>
+            <h4 class="title"><a href="">Internet Akses</a></h4>
+            <p class="description">Internet akses supercepat siap melayani kebutuhan anda.</p>
+            <br />
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="box wow fadeInUp" data-wow-delay="0.2s">
+            <div class="icon"><i class="fa fa-shield-alt"></i></div>
+            <h4 class="title"><a href="">VPN-Remote</a></h4>
+            <p class="description">VPN-Remote berguna jika anda ingin meremote server mikrotik darimanapun.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="box wow fadeInUp" data-wow-delay="0.2s">
+            <div class="icon"><i class="fas fa-server"></i></div>
+            <h4 class="title"><a href="">Colocation</a></h4>
+            <p class="description">Tersedia beberapa lokasi data center terbesar di Indonesia dan Singapura.</p>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="box wow fadeInUp" data-wow-delay="0.2s">
+            <div class="icon"><i class="fas fa-database"></i></div>
+            <h4 class="title"><a href="">Data Center</a></h4>
+            <p class="description">Menyediakan berbagai layanan mencakup colocation, hosting, dan layanan terkait
+              lainnya. Dan tersedia Full Rack dan Half Rack serta Meet Me Room.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="box wow fadeInUp" data-wow-delay="0.2s">
+            <div class="icon"><i class="fas fa-network-wired"></i></div>
+            <h4 class="title"><a href="">Interkoneksi</a></h4>
+            <p class="description">Interkoneksi supercepat siap melayani kebutuhan anda.</p>
+            <br /><br />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- #services -->
+
+  <!-- Service Start -->
+  <div class="container-xxl service py-5 pt-0">
+    <div class="container">
+      <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+        <h4 class="text-primary">Colocation Server</h4>
+        <h1 class="display-5 mb-3">- Colocation Server -</h1>
       </div>
       <div class="row g-4 wow fadeInUp" data-wow-delay="0.3s">
         <div class="col-lg-4">
@@ -258,7 +430,8 @@
                     <p>Bandwidth Inter : 10Mbps</p>
                     <p>Power Plug : 1 Port</p>
                     <p>Harga : Rp.550.000,-</p>
-                    <a href="" class="btn btn-primary py-3 px-5 mt-3">Order Sekarang</a>
+                    <a href="https://api.whatsapp.com/send?phone=6282142422727"
+                      class="btn btn-primary rounded-pill py-md-3 px-md-5 mt-3">Order Sekarang</a>
                   </div>
                 </div>
               </div>
@@ -276,7 +449,8 @@
                     <p>Bandwidth Inter : 10Mbps</p>
                     <p>Power Plug : 1 Port</p>
                     <p>Harga : Rp.500.000,-</p>
-                    <a href="" class="btn btn-primary py-3 px-5 mt-3">Order Sekarang</a>
+                    <a href="https://api.whatsapp.com/send?phone=6282142422727"
+                      class="btn btn-primary rounded-pill py-3 px-5 mt-3">Order Sekarang</a>
                   </div>
                 </div>
               </div>
@@ -294,7 +468,8 @@
                     <p>Bandwidth Inter : 10Mbps</p>
                     <p>Power Plug : 1 Port</p>
                     <p>Harga : Rp.850.000,-</p>
-                    <a href="" class="btn btn-primary py-3 px-5 mt-3">Order Sekarang</a>
+                    <a href="https://api.whatsapp.com/send?phone=6282142422727"
+                      class="btn btn-primary rounded-pill py-3 px-5 mt-3">Order Sekarang</a>
                   </div>
                 </div>
               </div>
@@ -312,7 +487,8 @@
                     <p>Bandwidth Inter : 10Mbps</p>
                     <p>Power Plug : 1 Port</p>
                     <p>Harga : Rp.1.200.000,-</p>
-                    <a href="" class="btn btn-primary py-3 px-5 mt-3">Order Sekarang</a>
+                    <a href="https://api.whatsapp.com/send?phone=6282142422727"
+                      class="btn btn-primary rounded-pill py-3 px-5 mt-3">Order Sekarang</a>
                   </div>
                 </div>
               </div>
@@ -330,7 +506,8 @@
                     <p>Bandwidth Inter : 10Mbps</p>
                     <p>Power Plug : 1 Port</p>
                     <p>Harga : Rp.1.800.000,-</p>
-                    <a href="" class="btn btn-primary py-3 px-5 mt-3">Order Sekarang</a>
+                    <a href="https://api.whatsapp.com/send?phone=6282142422727"
+                      class="btn btn-primary rounded-pill py-3 px-5 mt-3">Order Sekarang</a>
                   </div>
                 </div>
               </div>
@@ -348,7 +525,8 @@
                     <p>Bandwidth Inter : 10Mbps</p>
                     <p>Power Plug : 1 Port</p>
                     <p>Harga : Rp.1.000.000,-</p>
-                    <a href="" class="btn btn-primary py-3 px-5 mt-3">Order Sekarang</a>
+                    <a href="https://api.whatsapp.com/send?phone=6282142422727"
+                      class="btn btn-primary rounded-pill py-3 px-5 mt-3">Order Sekarang</a>
                   </div>
                 </div>
               </div>
@@ -366,80 +544,30 @@
                     <p>Bandwidth Inter : 10Mbps</p>
                     <p>Power Plug : 1 Port</p>
                     <p>Harga : Rp.1.500.000,-</p>
-                    <a href="" class="btn btn-primary py-3 px-5 mt-3">Order Sekarang</a>
+                    <a href="https://api.whatsapp.com/send?phone=6282142422727"
+                      class="btn btn-primary rounded-pill py-3 px-5 mt-3">Order Sekarang</a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-lg-4">
-          <p class="mb-4"><strong>Colocation server</strong> memberikan fleksibilitas dan keamanan terbaik untuk bisnis Anda. Dengan layanan colocation, Anda dapat menempatkan server Anda di pusat data kami yang aman dan dapat diandalkan, dengan dukungan teknis 24/7.</p>
-          <p><i class="fa fa-check text-primary me-3"></i>Keamanan tinggi dengan pengawasan 24/7</p>
-          <p><i class="fa fa-check text-primary me-3"></i>Infrastruktur jaringan yang andal</p>
-          <p><i class="fa fa-check text-primary me-3"></i>Skalabilitas sesuai kebutuhan bisnis</p>
-          <p><i class="fa fa-check text-primary me-3"></i>Biaya operasional yang lebih rendah</p>
-          <p class="mb-4">Hubungi kami untuk informasi lebih lanjut tentang layanan colocation server kami dan bagaimana kami dapat membantu bisnis Anda tumbuh dengan solusi IT yang handal.</p>
+        <div class="col-lg-4 bg-brown">
+          <!-- #AB7442 -->
+          <p class="mb-4 text-light"><strong>Colocation server</strong> memberikan fleksibilitas dan keamanan terbaik
+            untuk bisnis Anda. Dengan layanan colocation, Anda dapat menempatkan server Anda di pusat data kami yang
+            aman dan dapat diandalkan, dengan dukungan teknis 24/7.</p>
+          <p class="text-light"><i class="fa fa-check text-light me-3"></i>Keamanan tinggi dengan pengawasan 24/7</p>
+          <p class="text-light"><i class="fa fa-check text-light me-3"></i>Infrastruktur jaringan yang andal</p>
+          <p class="text-light"><i class="fa fa-check text-light me-3"></i>Skalabilitas sesuai kebutuhan bisnis</p>
+          <p class="text-light"><i class="fa fa-check text-light me-3"></i>Biaya operasional yang lebih rendah</p>
+          <p class="mb-4 text-light">Hubungi kami untuk informasi lebih lanjut tentang layanan colocation server kami
+            dan bagaimana kami dapat membantu bisnis Anda tumbuh dengan solusi IT yang handal.</p>
         </div>
       </div>
     </div>
   </div>
   <!-- Service End -->
-
-  <section id="about" class="wow fadeInUp">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 content">
-          <h1 class="animated slideInDown mb-4">PT. Data Buana Nusantara</h1>
-          <p class="fs-6 fw-medium mb-4 pb-2">
-            Memberikan layanan internet connection dengan berbagai media wireless dan fiber optic. solusi yang kreatif
-            serta komitmen atas layanannya, kami percaya mampu memberikan jasa yang berkualitas, konsisten dan memiliki
-            nilai
-            tambah demi tercapainya tujuan bersama. ditunjang dengan server berteknologi tinggi akan menghasilkan
-            layanan yang supercepat dengan suport team 24 Jam.
-          </p>
-          <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Lihat Area Coverage</a>
-        </div>
-        <div class="col-lg-6 about-img">
-          <img src="img/foto.jpg" alt="" />
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- #about -->
-
-  <!-- Facts Start -->
-  <div class="container-fluid facts my-1 py-1">
-    <div class="container py-1">
-      <div class="row g-5">
-        <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.1s">
-          <i class="fa fa-users fa-3x text-dark mb-3"></i>
-          <h1 class="display-4 text-custom" data-toggle="counter-up">124</h1>
-          <span class="fs-5 text-dark">Pengguna Puas</span>
-          <hr class="bg-white w-25 mx-auto mb-0" />
-        </div>
-        <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.3s">
-          <i class="fa fa-network-wired fa-3x text-dark mb-3"></i>
-          <h1 class="display-4 text-custom" data-toggle="counter-up">200</h1>
-          <span class="fs-5 text-dark">Koneksi Terhubung</span>
-          <hr class="bg-white w-25 mx-auto mb-0" />
-        </div>
-        <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.5s">
-          <i class="fa fa-clock fa-3x text-dark mb-3"></i>
-          <h1 class="display-4 text-custom" data-toggle="counter-up">999</h1>
-          <span class="fs-5 text-dark">Waktu Aktif Layanan</span>
-          <hr class="bg-white w-25 mx-auto mb-0" />
-        </div>
-        <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.7s">
-          <i class="fa fa-tachometer-alt fa-3x text-dark mb-3"></i>
-          <h1 class="display-4 text-custom" data-toggle="counter-up">100</h1>
-          <span class="fs-5 text-dark">Kecepatan Tertinggi</span>
-          <hr class="bg-white w-25 mx-auto mb-0" />
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Facts End -->
 
   <div class="container-xxl py-5 mt-4">
     <div class="container">
@@ -456,7 +584,7 @@
               <div class="nav nav-tabs mb-3" id="nav-tab" role="tablist">
                 <button class="nav-link fw-semi-bold active" id="nav-story-tab" data-bs-toggle="tab"
                   data-bs-target="#nav-story" type="button" role="tab" aria-controls="nav-story"
-                  aria-selected="true">Story</button>
+                  aria-selected="true">Tentang</button>
                 <button class="nav-link fw-semi-bold" id="nav-mission-tab" data-bs-toggle="tab"
                   data-bs-target="#nav-mission" type="button" role="tab" aria-controls="nav-mission"
                   aria-selected="false">Misi</button>
@@ -487,127 +615,9 @@
           </div>
         </div>
       </div>
-      <div class="border rounded p-4 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="row g-4">
-          <div class="col-lg-4 wow fadeIn" data-wow-delay="0.1s">
-            <div class="h-100">
-              <div class="d-flex">
-                <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary">
-                  <i class="fa fa-times text-white"></i>
-                </div>
-                <div class="ps-3">
-                  <h4>Tanpa Biaya Tersembunyi</h4>
-                  <span>Tidak ada biaya tersembunyi dalam layanan kami</span>
-                </div>
-                <div class="border-end d-none d-lg-block"></div>
-              </div>
-              <div class="border-bottom mt-4 d-block d-lg-none"></div>
-            </div>
-          </div>
-          <div class="col-lg-4 wow fadeIn" data-wow-delay="0.3s">
-            <div class="h-100">
-              <div class="d-flex">
-                <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary">
-                  <i class="fa fa-users text-white"></i>
-                </div>
-                <div class="ps-3">
-                  <h4>Tim Terpadu</h4>
-                  <span>Tim ahli kami siap membantu Anda setiap saat</span>
-                </div>
-                <div class="border-end d-none d-lg-block"></div>
-              </div>
-              <div class="border-bottom mt-4 d-block d-lg-none"></div>
-            </div>
-          </div>
-          <div class="col-lg-4 wow fadeIn" data-wow-delay="0.5s">
-            <div class="h-100">
-              <div class="d-flex">
-                <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary">
-                  <i class="fa fa-phone text-white"></i>
-                </div>
-                <div class="ps-3">
-                  <h4>Tersedia 24/7</h4>
-                  <span>Kami tersedia kapan saja untuk membantu Anda</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 
-  <!-- Services Start -->
-  <section id="services">
-    <div class="container">
-      <div class="section-title text-center">
-        <h1 class="display-6 mb-5">Jelajahi Layanan Kami</h1>
-      </div>
-      <div class="section-title position-relative text-center mx-auto mb-5 pb-4 wow fadeInUp" data-wow-delay="0.1s"
-        style="max-width: 600px">
-        <!-- <h1 class="mb-3">Jelajahi Layanan Kami Menawarkan Untuk Anda</h1> -->
-        <p class="mb-4">
-          <b>Data Buana Nusantara</b> adalah perusahaan teknologi dengan komitmen untuk terus berinovasi dan
-          berinvestasi dalam menghadirkan layanan terbaik dan jaringan yang lebih luas bagi pelanggan kami. Komitmen ini
-          didukung oleh Tim
-          Engineering terbaik.
-        </p>
-      </div>
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="box wow fadeInLeft">
-            <div class="icon"><i class="fas fa-wifi"></i></div>
-            <h4 class="title"><a href="">Fiber To The Home</a></h4>
-            <p class="description">Layanan internet dengan system share tanpa batasan kouta (FUP) memberikan dukungan
-              kepada pelanggan untuk kebutuhan kerja dan sekolah dari rumah.</p>
-          </div>
-        </div>
-
-        <div class="col-lg-6">
-          <div class="box wow fadeInRight">
-            <div class="icon"><i class="fas fa-globe"></i></div>
-            <h4 class="title"><a href="">Internet Akses</a></h4>
-            <p class="description">Internet akses supercepat siap melayani kebutuhan anda.</p>
-            <br />
-          </div>
-        </div>
-
-        <div class="col-lg-6">
-          <div class="box wow fadeInLeft" data-wow-delay="0.2s">
-            <div class="icon"><i class="fa fa-shield-alt"></i></div>
-            <h4 class="title"><a href="">VPN-Remote</a></h4>
-            <p class="description">VPN-Remote berguna jika anda ingin meremote server mikrotik darimanapun.</p>
-          </div>
-        </div>
-
-        <div class="col-lg-6">
-          <div class="box wow fadeInRight" data-wow-delay="0.2s">
-            <div class="icon"><i class="fas fa-server"></i></div>
-            <h4 class="title"><a href="">Colocation</a></h4>
-            <p class="description">Tersedia beberapa lokasi data center terbesar di Indonesia dan Singapura.</p>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="box wow fadeInLeft" data-wow-delay="0.2s">
-            <div class="icon"><i class="fas fa-database"></i></div>
-            <h4 class="title"><a href="">Data Center</a></h4>
-            <p class="description">Menyediakan berbagai layanan mencakup colocation, hosting, dan layanan terkait
-              lainnya. Dan tersedia Full Rack dan Half Rack serta Meet Me Room.</p>
-          </div>
-        </div>
-
-        <div class="col-lg-6">
-          <div class="box wow fadeInRight" data-wow-delay="0.2s">
-            <div class="icon"><i class="fas fa-network-wired"></i></div>
-            <h4 class="title"><a href="">Interkoneksi</a></h4>
-            <p class="description">Interkoneksi supercepat siap melayani kebutuhan anda.</p>
-            <br /><br />
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- #services -->
 
   <!-- About Start -->
   <!-- <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
@@ -657,7 +667,7 @@
   <!-- About End -->
 
   <!-- Service Start -->
-  <div class="container-xxl py-5">
+  <!-- <div class="container-xxl py-5">
     <div class="container">
       <div class="section-title text-center">
         <h1 class="display-5 mb-5">Artikel</h1>
@@ -735,10 +745,83 @@
               </div>
             </div>
           </div> -->
-      </div>
+      <!-- </div>
+    </div>
+  </div> -->
+  <!-- Service End -->
+
+   <!-- Blog Start -->
+   <div class="container-fluid blog py-5 pt-2">
+    <div class="container py-5">
+        <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+            <h4 class="text-primary">Artikel</h4>
+            <h1 class="display-5 mb-3">- Artikel -</h1>
+        </div>
+        <div class="row g-4 justify-content-center">
+            <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="blog-item">
+                    <div class="blog-img">
+                        <img src="img/consultant/consultant-1.png" class="img-fluid rounded-top w-100" alt="">
+                        <div class="blog-categiry py-2 px-4">
+                            <span>Now</span>
+                        </div>
+                    </div>
+                    <div class="blog-content p-4">
+                        <div class="blog-comment d-flex justify-content-between mb-3">
+                            <div class="small"><span class="fa fa-user text-primary"></span>Admin</div>
+                            <div class="small"><span class="fa fa-calendar text-primary"></span> 30 Des 2025</div>
+                            <div class="small"><span class="fa fa-comment-alt text-primary"></span> 6 Comments</div>
+                        </div>
+                        <a href="#" class="h4 d-inline-block mb-3">Meningkatnya layanan internet hingga 40%</a>
+                        <p class="mb-3">Era globalisasi sekarang menyebabkan banyak orang sangat membutuhkan internet, semua instant</p>
+                        <a href="#" class="btn p-0">Baca Selengkapnya <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.4s">
+                <div class="blog-item">
+                    <div class="blog-img">
+                        <img src="img/consultant/consultant-2.png" class="img-fluid rounded-top w-100" alt="">
+                        <div class="blog-categiry py-2 px-4">
+                            <span>Trending</span>
+                        </div>
+                    </div>
+                    <div class="blog-content p-4">
+                        <div class="blog-comment d-flex justify-content-between mb-3">
+                            <div class="small"><span class="fa fa-user text-primary"></span>Admin</div>
+                            <div class="small"><span class="fa fa-calendar text-primary"></span> 30 Des 2025</div>
+                            <div class="small"><span class="fa fa-comment-alt text-primary"></span> 6 Comments</div>
+                        </div>
+                        <a href="#" class="h4 d-inline-block mb-3">Penggunaan internet 6G di Jepang</a>
+                        <p class="mb-3">Jepang berhasil menggunakan internet 6G pada beberapa wilayah disana, membuat internet lancar</p>
+                        <a href="#" class="btn p-0">Baca Selengkapnya <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.6s">
+                <div class="blog-item">
+                    <div class="blog-img">
+                        <img src="img/consultant/consultant-3.png" class="img-fluid rounded-top w-100" alt="">
+                        <div class="blog-categiry py-2 px-4">
+                            <span>Trending</span>
+                        </div>
+                    </div>
+                    <div class="blog-content p-4">
+                        <div class="blog-comment d-flex justify-content-between mb-3">
+                            <div class="small"><span class="fa fa-user text-primary"></span>Admin</div>
+                            <div class="small"><span class="fa fa-calendar text-primary"></span> 30 Des 2025</div>
+                            <div class="small"><span class="fa fa-comment-alt text-primary"></span> 6 Comments</div>
+                        </div>
+                        <a href="#" class="h4 d-inline-block mb-3">Layanan memengaruhi Pengguna</a>
+                        <p class="mb-3">Dengan layanan terbaik yang kami berikan, sehingga banyak pengguna yang suka dengan layanan</p>
+                        <a href="#" class="btn p-0">Baca Selengkapnya <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
   </div>
-  <!-- Service End -->
+  <!-- Blog End -->
 
   <!-- Feature Start -->
   <!-- <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
@@ -811,9 +894,9 @@
   <!-- Pricing Start -->
   <div class="container-xxl py-5">
     <div class="container px-lg-5">
-      <div class="section-title position-relative text-center mx-auto mb-5 pb-4 wow fadeInUp" data-wow-delay="0.1s"
-        style="max-width: 600px">
-        <h1 class="mb-3">Daftar Paket</h1>
+      <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+        <h4 class="text-primary">Daftar Paket</h4>
+        <h1 class="display-5 mb-3">- Daftar Paket -</h1>
       </div>
       <div class="row gy-5 gx-4">
         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
@@ -835,11 +918,11 @@
               <!-- <a class="btn btn-primary px-4 py-2" href="">Beli</a> -->
             </div>
             <div class="p-4">
-              <p class="border-bottom pb-3"><i class="fas fa-clock text-primary me-3"></i>24 jam Internet Akses</p>
-              <p class="border-bottom pb-3"><i class="fas fa-tachometer-alt text-primary me-3"></i>Unlimited Bandwith
+              <p class="pb-1"><i class="fas fa-clock text-primary me-3"></i>24 jam Internet Akses</p>
+              <p class="pb-1"><i class="fas fa-tachometer-alt text-primary me-3"></i>Unlimited Bandwith
               </p>
-              <p class="border-bottom pb-3"><i class="fas fa-users text-primary me-3"></i>Full Customer Support</p>
-              <p class="border-bottom pb-3"><i class="fas fa-check text-primary me-3"></i>Online School Recomendation
+              <p class="pb-1"><i class="fas fa-users text-primary me-3"></i>Full Customer Support</p>
+              <p class="pb-1"><i class="fas fa-check text-primary me-3"></i>Online School Recomendation
               </p>
               <p class="mb-0"><i class="fas fa-phone text-primary me-3"></i>1-3 Gadget(Pengguna)</p>
             </div>
@@ -864,11 +947,11 @@
               <!-- <a class="btn btn-primary px-4 py-2" href="">Beli</a> -->
             </div>
             <div class="p-4">
-              <p class="border-bottom pb-3"><i class="fas fa-clock text-primary me-3"></i>24 jam Internet Akses</p>
-              <p class="border-bottom pb-3"><i class="fas fa-tachometer-alt text-primary me-3"></i>Unlimited Bandwith
+              <p class="pb-1"><i class="fas fa-clock text-primary me-3"></i>24 jam Internet Akses</p>
+              <p class="pb-1"><i class="fas fa-tachometer-alt text-primary me-3"></i>Unlimited Bandwith
               </p>
-              <p class="border-bottom pb-3"><i class="fas fa-users text-primary me-3"></i>Full Customer Support</p>
-              <p class="border-bottom pb-3"><i class="fas fa-check text-primary me-3"></i>Online School Recomendation
+              <p class="pb-1"><i class="fas fa-users text-primary me-3"></i>Full Customer Support</p>
+              <p class="pb-1"><i class="fas fa-check text-primary me-3"></i>Online School Recomendation
               </p>
               <p class="mb-0"><i class="fas fa-phone text-primary me-3"></i>1-6 Gadget(Pengguna)</p>
             </div>
@@ -893,16 +976,18 @@
               <!-- <a class="btn btn-primary px-4 py-2" href="">Beli</a> -->
             </div>
             <div class="p-4">
-              <p class="border-bottom pb-3"><i class="fas fa-clock text-primary me-3"></i>24 jam Internet Akses</p>
-              <p class="border-bottom pb-3"><i class="fas fa-tachometer-alt text-primary me-3"></i>Unlimited Bandwith
+              <p class="pb-1"><i class="fas fa-clock text-primary me-3"></i>24 jam Internet Akses</p>
+              <p class="pb-1"><i class="fas fa-tachometer-alt text-primary me-3"></i>Unlimited Bandwith
               </p>
-              <p class="border-bottom pb-3"><i class="fas fa-users text-primary me-3"></i>Full Customer Support</p>
-              <p class="border-bottom pb-3"><i class="fas fa-check text-primary me-3"></i>Online School Recomendation
+              <p class="pb-1"><i class="fas fa-users text-primary me-3"></i>Full Customer Support</p>
+              <p class="pb-1"><i class="fas fa-check text-primary me-3"></i>Online School Recomendation
               </p>
               <p class="mb-0"><i class="fas fa-phone text-primary me-3"></i>1-9 Gadget(Pengguna)</p>
             </div>
           </div>
         </div>
+      </div>
+      <div class="row gy-5 gx-4 pt-5 flex justify-content-center align-items-center">
         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
           <div class="position-relative shadow rounded border-top border-5 border-primary">
             <div
@@ -922,11 +1007,11 @@
               <!-- <a class="btn btn-primary px-4 py-2" href="">Beli</a> -->
             </div>
             <div class="p-4">
-              <p class="border-bottom pb-3"><i class="fas fa-clock text-primary me-3"></i>24 jam Internet Akses</p>
-              <p class="border-bottom pb-3"><i class="fas fa-tachometer-alt text-primary me-3"></i>Unlimited Bandwith
+              <p class="pb-1"><i class="fas fa-clock text-primary me-3"></i>24 jam Internet Akses</p>
+              <p class="pb-1"><i class="fas fa-tachometer-alt text-primary me-3"></i>Unlimited Bandwith
               </p>
-              <p class="border-bottom pb-3"><i class="fas fa-users text-primary me-3"></i>Full Customer Support</p>
-              <p class="border-bottom pb-3"><i class="fas fa-check text-primary me-3"></i>Online School Recomendation
+              <p class="pb-1"><i class="fas fa-users text-primary me-3"></i>Full Customer Support</p>
+              <p class="pb-1"><i class="fas fa-check text-primary me-3"></i>Online School Recomendation
               </p>
               <p class="mb-0"><i class="fas fa-phone text-primary me-3"></i>1-12 Gadget(Pengguna)</p>
             </div>
@@ -951,13 +1036,13 @@
               <!-- <a class="btn btn-primary px-4 py-2" href="">Beli</a> -->
             </div>
             <div class="p-4">
-              <p class="border-bottom pb-3"><i class="fas fa-clock text-primary me-3"></i>24 jam Internet Akses</p>
-              <p class="border-bottom pb-3"><i class="fas fa-tachometer-alt text-primary me-3"></i>Unlimited Bandwith
+              <p class="pb-1"><i class="fas fa-clock text-primary me-3"></i>24 jam Internet Akses</p>
+              <p class="pb-1"><i class="fas fa-tachometer-alt text-primary me-3"></i>Unlimited Bandwith
               </p>
-              <p class="border-bottom pb-3"><i class="fas fa-users text-primary me-3"></i>Full Customer Support</p>
-              <p class="border-bottom pb-3"><i class="fas fa-check text-primary me-3"></i>Online School Recomendation
+              <p class="pb-1"><i class="fas fa-users text-primary me-3"></i>Full Customer Support</p>
+              <p class="pb-1"><i class="fas fa-check text-primary me-3"></i>Online School Recomendation
               </p>
-              <p class="mb-0"><i class="fas fa-phone text-primary me-3"></i>Lebih dari 12 Gadget(Pengguna)</p>
+              <p class="mb-0"><i class="fas fa-phone text-primary me-3"></i>> 12 Gadget(Pengguna)</p>
             </div>
           </div>
         </div>
@@ -966,61 +1051,94 @@
   </div>
   <!-- Pricing End -->
 
-  <!-- Comparison Start -->
-  <div class="container-xxl py-5">
-    <div class="container px-lg-5">
-      <div class="section-title position-relative text-center mx-auto mb-5 pb-4 wow fadeInUp" data-wow-delay="0.1s"
-        style="max-width: 600px">
-        <h1 class="mb-3">Layanan Kami</h1>
+  <!-- Feature Start -->
+  <div class="container-fluid feature bg-light py-5">
+    <div class="container py-5">
+      <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+        <h4 class="text-primary">Layanan Kami</h4>
+        <h1 class="display-5 mb-3">- Layanan Kami -</h1>
       </div>
-      <div class="row g-5 comparison position-relative">
-        <div class="col-lg-12 pe-lg-5">
-          <!-- <div class="section-title position-relative mx-auto mb-4 pb-4">
-                        <h3 class="fw-bold mb-0">Shared Server</h3>
-                    </div> -->
-          <div class="row gy-3 gx-5">
-            <div class="col-sm-4 wow fadeIn" data-wow-delay="0.1s">
-              <i class="fa fa-server fa-3x text-primary mb-3"></i>
-              <h5 class="fw-bold">Kualitas Hasil</h5>
-              <p>DBN di tenagai oleh tenaga profesional di bidangnya agar mendapat hasil maksimal.</p>
+      <div class="row g-4">
+        <!-- Baris 1 -->
+        <div class="col-12 col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+          <div class="feature-item p-4 pt-0">
+            <div class="feature-icon p-4 mb-4">
+              <i class="far fa-handshake fa-3x"></i>
             </div>
-            <div class="col-sm-4 wow fadeIn" data-wow-delay="0.3s">
-              <i class="fa fa-shield-alt fa-3x text-primary mb-3"></i>
-              <h5 class="fw-bold">Analisa</h5>
-              <p>DBN akan terus berupaya agar anda mendapat layanan maksimal demi kebutuhan kerja anda.</p>
+            <h4 class="mb-4">Kualitas Hasil</h4>
+            <p class="mb-4">DBN di tenagai oleh tenaga profesional di bidangnya agar mendapat hasil maksimal.
+            </p>
+            <!-- <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Learn More</a> -->
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
+          <div class="feature-item p-4 pt-0">
+            <div class="feature-icon p-4 mb-4">
+              <i class="fa fa-dollar-sign fa-3x"></i>
             </div>
-            <div class="col-sm-4 wow fadeIn" data-wow-delay="0.5s">
-              <i class="fa fa-cog fa-3x text-primary mb-3"></i>
-              <h5 class="fw-bold">Harga Terjangkau</h5>
-              <p>Layanan DBN sangatlah terjangkau, jadi tunggu apa lagi.</p>
+            <h4 class="mb-4">Analisa</h4>
+            <p class="mb-4">DBN akan terus berupaya agar anda mendapat layanan maksimal demi kebutuhan kerja anda.
+            </p>
+            <!-- <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Learn More</a> -->
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
+          <div class="feature-item p-4 pt-0">
+            <div class="feature-icon p-4 mb-4">
+              <i class="fa fa-bullseye fa-3x"></i>
             </div>
-            <div class="col-sm-4 wow fadeIn" data-wow-delay="0.7s">
-              <i class="fa fa-headset fa-3x text-primary mb-3"></i>
-              <h5 class="fw-bold">Sangat Mudah</h5>
-              <p>Area Coverage DBN cukup luas, jadi anda sangat mudah menjumpai kantor cabang kami.</p>
+            <h4 class="mb-4">Harga Terjangkau</h4>
+            <p class="mb-4">Layanan DBN sangatlah terjangkau, jadi tunggu apa lagi.
+            </p><br>
+            <!-- <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Learn More</a> -->
+          </div>
+        </div>
+
+        <!-- Baris 2 -->
+        <div class="col-12 col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.8s">
+          <div class="feature-item p-4 pt-0">
+            <div class="feature-icon p-4 mb-4">
+              <i class="fa fa-headphones fa-3x"></i>
             </div>
-            <div class="col-sm-4 wow fadeIn" data-wow-delay="0.5s">
-              <i class="fa fa-cog fa-3x text-primary mb-3"></i>
-              <h5 class="fw-bold">Free Support</h5>
-              <p>DBN menyediakan Free Support 24 jam guna menunjang pekerjaan anda.</p>
+            <h4 class="mb-4">Sangat Mudah</h4>
+            <p class="mb-4">Area Coverage DBN cukup luas, jadi anda sangat mudah menjumpai kantor cabang kami.
+            </p>
+            <!-- <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Learn More</a> -->
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="1s">
+          <div class="feature-item p-4 pt-0">
+            <div class="feature-icon p-4 mb-4">
+              <i class="fa fa-cogs fa-3x"></i>
             </div>
-            <div class="col-sm-4 wow fadeIn" data-wow-delay="0.7s">
-              <i class="fa fa-headset fa-3x text-primary mb-3"></i>
-              <h5 class="fw-bold">Meningkat Secara Efektif</h5>
-              <p>Kami pastikan usaha anda akan melonjak drastis.</p>
+            <h4 class="mb-4">Free Support</h4>
+            <p class="mb-4">DBN menyediakan Free Support 24 jam guna menunjang pekerjaan anda.
+            </p><br>
+            <!-- <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Learn More</a> -->
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="1.2s">
+          <div class="feature-item p-4 pt-0">
+            <div class="feature-icon p-4 mb-4">
+              <i class="fa fa-shield-alt fa-3x"></i>
             </div>
+            <h4 class="mb-4">Meningkat Secara Efektif</h4>
+            <p class="mb-4">Kami pastikan usaha anda akan melonjak drastis.
+            </p><br>
+            <!-- <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Learn More</a> -->
           </div>
         </div>
       </div>
     </div>
   </div>
-  <!-- Comparison Start -->
+  <!-- Feature End -->
 
   <!-- Team Start -->
   <div class="container-xxl py-5">
     <div class="container">
-      <div class="section-title text-center">
-        <h1 class="display-5 mb-5">Tim</h1>
+      <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+        <h4 class="text-primary">Tim</h4>
+        <h1 class="display-5 mb-3">- Tim -</h1>
       </div>
       <div class="row g-4">
         <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -1095,8 +1213,9 @@
   <!-- Testimonial Start -->
   <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
     <div class="container">
-      <div class="section-title text-center">
-        <h1 class="display-5 mb-5">Testimoni</h1>
+      <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+        <h4 class="text-primary">Testimoni</h4>
+        <h1 class="display-5 mb-3">- Testimoni -</h1>
       </div>
       <div class="owl-carousel testimonial-carousel">
         <div class="testimonial-item text-center">
@@ -1176,8 +1295,8 @@
   <!-- End Clients Section -->
 
   <!-- Footer Start -->
-  <div class="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
-    <div class="container py-5">
+  <div class="container-fluid bg-dark text-light footer mt-5 pt-2 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container py-4">
       <div class="row g-5">
         <div class="col-lg-3 col-md-6">
           <h4 class="text-light mb-4">PT. <span>Data Buana Nusantara</span></h4>
@@ -1185,10 +1304,10 @@
           <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+62 821 4242 2727</p>
           <p class="mb-2"><i class="fa fa-envelope me-3"></i>dbn@gmail.com</p>
           <div class="d-flex pt-2">
-            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+            <a class="btn btn-outline-light rounded-pill btn-social" href=""><i class="fab fa-twitter"></i></a>
+            <a class="btn btn-outline-light rounded-pill btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+            <a class="btn btn-outline-light rounded-pill btn-social" href=""><i class="fab fa-youtube"></i></a>
+            <a class="btn btn-outline-light rounded-pill btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
           </div>
         </div>
         <div class="col-lg-3 col-md-6">
@@ -1201,25 +1320,26 @@
         </div>
         <div class="col-lg-3 col-md-6">
           <h4 class="text-light mb-4">Tautan Cepat</h4>
-          <a class="btn btn-link" href="">Beranda</a>
-          <a class="btn btn-link" href="">Mengapa Kami</a>
-          <a class="btn btn-link" href="">Tentang Kami</a>
-          <a class="btn btn-link" href="">Layanan</a>
-          <a class="btn btn-link" href="">Kontak</a>
+          <a class="btn btn-link" href="index.html">Beranda</a>
+          <a class="btn btn-link" href="whyus.html">Mengapa Kami</a>
+          <a class="btn btn-link" href="about.html">Tentang Kami</a>
+          <a class="btn btn-link" href="service.html">Layanan</a>
+          <a class="btn btn-link" href="contact.html">Kontak Kami</a>
         </div>
         <div class="col-lg-3 col-md-6">
-          <h4 class="text-light mb-4">Newsletter</h4>
-          <div class="position-relative mx-auto" style="max-width: 400px">
-            <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email" />
-            <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+          <h4 class="text-light mb-4">Buletin</h4>
+          <div class="position-relative rounded-pill mb-1">
+            <input class="form-control rounded-pill w-100 py-3 ps-4 pe-5" type="text" placeholder="Email">
+            <button type="button"
+              class="btn btn-primary rounded-pill position-absolute top-0 end-0 py-2 mt-2 me-2">Daftar</button>
           </div>
           <br />
           <h4 class="text-light mb-2">Kontak Kami</h4>
           <div class="d-flex pt-2">
-            <a class="btn btn-outline-light btn-social" href="mailto:admin@dbn.net.id"><i
+            <a class="btn btn-outline-light rounded-pill btn-social" href="mailto:admin@dbn.net.id"><i
                 class="fas fa-envelope"></i></a>
-            <a class="btn btn-outline-light btn-social" href="https://api.whatsapp.com/send?phone=6282142422727"><i
-                class="fas fa-phone-alt"></i></a>
+            <a class="btn btn-outline-light rounded-pill btn-social"
+              href="https://api.whatsapp.com/send?phone=6282142422727"><i class="fas fa-phone-alt"></i></a>
           </div>
         </div>
       </div>
@@ -1227,8 +1347,8 @@
     <div class="container">
       <div class="copyright">
         <div class="row">
-          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">&copy; 2019<a class="border-bottom" href="#">Data
-              Buana Nusantara</a>, All Right Reserved.</div>
+          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">&copy; 2019
+            <a class="border-bottom" href="#">Data Buana Nusantara</a>, All Right Reserved.</div>
           <div class="col-md-6 text-center text-md-end">
             <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
             Designed By <a class="border-bottom" href="#">Tim DBN</a>
@@ -1240,7 +1360,7 @@
   <!-- Footer End -->
 
   <!-- Back to Top -->
-  <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
+  <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-pill back-to-top"><i class="bi bi-arrow-up"></i></a>
 
   <!-- JavaScript Libraries -->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>

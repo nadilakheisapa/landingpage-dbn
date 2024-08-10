@@ -50,7 +50,7 @@
     // Header carousel
     $(".header-carousel").owlCarousel({
         autoplay: true,
-        smartSpeed: 1500,
+        smartSpeed: 900,
         items: 1,
         dots: true,
         loop: true,
@@ -111,7 +111,45 @@
             items: 6
           }
         }
+    });
+
+      $(document).ready(function(){
+        $(".blog-carousel").owlCarousel({
+            autoplay: true,
+            dots: true,
+            loop: true,
+            responsive: {
+              0: {
+                items: 1
+              },
+              768: {
+                items: 2
+              },
+              1024: {
+                items: 3
+              }
+            }
+        });
+    });
+    $(document).ready(function() {
+        if ($(window).width() < 992) { // Hanya inisialisasi pada tablet dan mobile
+          $(".owl-carousel").owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: false,
+            dots: true,
+            responsive: {
+              0: {
+                items: 1
+              },
+              768: {
+                items: 2
+              }
+            }
+          });
+        }
       });
+    
     
       // Initi AOS
       AOS.init({

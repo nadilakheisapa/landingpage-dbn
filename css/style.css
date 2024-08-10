@@ -151,12 +151,15 @@
     }
 }
 
+/* =========================== */
+/***===  Header carousel  ===***/
+/* =========================== */
 
-/*** Header ***/
   /* Mengatur gambar carousel */
   .owl-carousel-item img {
     width: 100%;
-    height: auto; /* Menjaga rasio aspek gambar */
+    /* height: auto;  */
+    height: 550px; 
     object-fit: cover; /* Memastikan gambar mengisi area dengan baik */
   }
 
@@ -170,10 +173,11 @@
     margin-top: 0; /* Menetapkan margin top ke 0 */
     padding-top: 0; /* Menetapkan padding top ke 0 jika diperlukan */
   }
+
 @media (max-width: 768px) {
     .header-carousel .owl-carousel-item {
         position: relative;
-        min-height: 420px;
+        min-height: 500px;
     }
 
     .header-carousel .owl-carousel-item img {
@@ -218,6 +222,7 @@
     border: 1px solid #FFFFFF;
     font-size: 22px;
     transition: .5s;
+    border-radius: 50px;
     /* margin-top: 25px; */
 
 }
@@ -814,6 +819,9 @@
     background-color: #eb5d1e !important;
   } */
 
+   /* untuk warna coklat template */
+  /* #AB7442 */
+
 /* ===== mengapa kami - img ====== */
 .custom-img {
     width: 100%;
@@ -1074,56 +1082,102 @@
   .faq .faq-list a.collapsed i::before {
     content: "\eab2" !important;
   }
-  
 
-
-
-  #blog {
-    background: #f2f5fa;
+/* section blog */
+#blog {
     padding-top: 50px;
-    padding-bottom: 50px;
-  }
-  .blog .blog-slider {
+    padding-bottom: 100px;
+}
+
+.blog .owl-carousel {
     overflow: hidden;
-  }
-  
-  @media (max-width: 767.98px) {
-    .blog-item-wrapper {
-      margin: 0 10px 30px; 
-    }
-      .blog .swiper-pagination {
-        margin-top: 70px; 
-      }
-      .swiper-pagination .swiper-pagination-bullet {
-        margin-top: 40px; 
-      }
-      .swiper-pagination .swiper-pagination-bullet-active {
-        margin-top: 40px; 
-      }
-      .blog-item-wrapper {
-        margin-bottom: 30px;
-      }
-      #blog .blog-item-wrapper {
-        margin-bottom: 30px;
-      }
-  }
-  
-  .blog .swiper-pagination {
-    margin-top: 80px;
-    position: relative;
-  }
-  .swiper-pagination .swiper-pagination-bullet {
+}
+
+/* Carousel Pagination (Owl Carousel) */
+.owl-dots {
+    text-align: center;
+    margin-top: 20px; /* Adjust the space from carousel */
+}
+
+.owl-dot {
+    display: inline-block;
+    margin: 0 5px;
     width: 12px;
     height: 12px;
+    border-radius: 50%;
     background-color: #fff;
+    border: 1px solid #AB7442;
     opacity: 1;
-    border: 1px solid #5777ba;
-  }
-  
-  .swiper-pagination .swiper-pagination-bullet-active {
-    background-color: #5777ba;
-  }
-  
-  
-  
-   
+}
+
+.owl-dot.active {
+    background-color: #AB7442;
+}
+
+/* Blog Carousel */
+.blog .owl-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px; /* Adjust padding between cards */
+}
+
+.blog .owl-item img {
+    width: 100%;
+    height: auto;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.blog .owl-item img:hover {
+    opacity: 1;
+}
+
+/* Adjusting blog-item for better display */
+.blog-item {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    /* Adjust height and ensure it is consistent */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ensure content fills the card correctly */
+.blog-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Adjust the height of blog content to fit inside card */
+.blog-content {
+    flex: 1; /* Ensures the content area expands to fit available space */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .blog .owl-item {
+        padding: 0 10px; 
+    }
+
+    .owl-dots {
+        margin-top: 50px; /* Adjust space on smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .blog .owl-item {
+        padding: 0 10px; 
+    }
+
+    .owl-dots {
+        margin-top: 30px; 
+    }
+}
+
+
+
+
